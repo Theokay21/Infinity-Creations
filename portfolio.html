@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Infinity Creations</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Infinity Creations</div>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="toggle-theme" aria-label="Toggle Theme">🌓</button>
+  </header>
+
+  <section class="hero">
+    <h1>Our Portfolio</h1>
+    <p>A curated showcase of our latest work and creative projects.</p>
+  </section>
+
+  <section class="portfolio">
+    <div class="card">
+      <h3>E-commerce Website</h3>
+          <img src="images/e-commerce-website-design.png" alt="E-commerce Website" width="724" height="268">
+      <p>Modern online shopping experience for a fashion brand.</p>
+    </div>
+    <div class="card">
+      <h3>Brand Identity</h3>
+          <img src="images/Brand Identity 1.jpg" alt="Brand Identity" width="724" height="268">
+      <p>Logo, color palette, and typography for a tech startup.</p>
+    </div>
+    <div class="card">
+      <h3>Portfolio Website</h3>
+      <img src="images/Portfolio website.jpg" alt="Portfolio Website" width="724" height="268">
+      <p>Clean, professional portfolio for a photographer.</p>
+    </div>
+    <div class="card">
+      <h3>Social Media Campaign</h3>
+          <img src="images/Social Media Campaign.png" alt="Social Media Campaign" width="724" height="268">
+      <p>Vibrant graphics and storyboards for product launch buzz.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Infinity Creations. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const toggleBtn = document.querySelector('.toggle-theme');
+    const body = document.body;
+
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark');
+      localStorage.setItem('theme', body.classList.contains('dark') ? 'dark' : 'light');
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      if (localStorage.getItem('theme') === 'dark') {
+        body.classList.add('dark');
+      }
+    });
+  </script>
+</body>
+</html>

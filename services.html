@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services - Infinity Creations</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Infinity Creations</div>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="toggle-theme" aria-label="Toggle Theme">🌓</button>
+  </header>
+
+  <section class="hero">
+    <h1>Our Services</h1>
+    <p>Explore the wide range of design and branding solutions we offer.</p>
+  </section>
+
+  <section class="services">
+    <div class="card">
+      <h3>Brand Identity</h3>
+      <img src="images/Brand Identity.jpg" alt="brand identity" width="475" height="218">
+      <p>From logos to full brand guides, we help define your visual presence.</p>
+    </div>
+    <div class="card">
+      <h3>Website Design</h3>
+      <img src="images/Website Design.jpg" alt="website design" width="475" height="218">
+      <p>Modern, responsive, and tailored websites for businesses of all kinds.</p>
+    </div>
+    <div class="card">
+      <h3>UI/UX Design</h3>
+      <img src="images/UI & UX Design.jpg" alt="UI/UX design" width="475" height="218">
+      <p>Beautiful and intuitive interfaces that enhance user experiences.</p>
+    </div>
+    <div class="card">
+      <h3>Graphic Design</h3>
+      <img src="images/Graphic Design.jpg" alt="graphic design" width="475" height="218">
+      <p>Posters, brochures, social media content — visually stunning creations.</p>
+    </div>
+    <div class="card">
+      <h3>Marketing Materials</h3>
+      <img src="images/Marketing Materials.jpg" alt="marketing materials" width="475" height="218">
+      <p>Branded assets for print and digital campaigns that convert.</p>
+    </div>
+    <div class="card">
+      <h3>Consulting</h3>
+      <img src="images/Consulting.jpg" alt="consulting" width="475" height="218">
+      <p>Strategic guidance to align your brand and digital presence with your goals.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Infinity Creations. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const toggleBtn = document.querySelector('.toggle-theme');
+    const body = document.body;
+
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark');
+      localStorage.setItem('theme', body.classList.contains('dark') ? 'dark' : 'light');
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      if (localStorage.getItem('theme') === 'dark') {
+        body.classList.add('dark');
+      }
+    });
+  </script>
+</body>
+</html>

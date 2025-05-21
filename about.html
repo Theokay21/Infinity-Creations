@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Infinity Creations</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Infinity Creations</div>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="toggle-theme" aria-label="Toggle Theme">🌓</button>
+  </header>
+
+  <section class="hero">
+    <h1>About Infinity Creations</h1>
+    <p>Driven by passion. Guided by purpose. Crafted with creativity.</p>
+  </section>
+
+  <section class="about">
+    <h2>Our Story</h2>
+    <p>Infinity Creations was born from the idea that design should inspire and empower. Founded by a team of passionate creatives, we specialize in transforming concepts into stunning digital and print realities. Our journey began with a mission to help brands find their voice and express it boldly through powerful visuals and strategic storytelling.</p>
+
+    <h2>Meet the Team</h2>
+    <div class="team">
+      <div class="card">
+        <h3>Jane Doe</h3>
+        <p>Creative Director</p>
+      </div>
+      <div class="card">
+        <h3>John Smith</h3>
+        <p>Lead Developer</p>
+      </div>
+      <div class="card">
+        <h3>Sofia Lee</h3>
+        <p>Brand Strategist</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Infinity Creations. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const toggleBtn = document.querySelector('.toggle-theme');
+    const body = document.body;
+
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark');
+      localStorage.setItem('theme', body.classList.contains('dark') ? 'dark' : 'light');
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      if (localStorage.getItem('theme') === 'dark') {
+        body.classList.add('dark');
+      }
+    });
+  </script>
+</body>
+</html>

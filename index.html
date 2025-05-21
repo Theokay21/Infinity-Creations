@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infinity Creations</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo">Infinity Creations</div>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="toggle-theme" aria-label="Toggle Theme">🌓</button>
+  </header>
+
+  <section class="hero parallax">
+    <h1>Where Imagination Meets Creativity</h1>
+    <p>Your vision. Our creativity. Together, let's build something exceptional.</p>
+    <a href="portfolio.html" class="btn-primary">View Portfolio</a>
+  </section>
+
+  <section class="intro">
+    <h2>Welcome to Infinity Creations</h2>
+    <p>We are a modern creative agency specializing in web design, branding, and visual storytelling. We blend strategy, design, and innovation to craft immersive experiences for your audience.</p>
+  </section>
+
+  <section class="features">
+    <div class="card">
+      <h3>Creative Branding</h3>
+      <img src="images/Creative Branding.jpg" alt="Creative Branding" width="475" height="220">
+      <p>Elevate your brand with strategic visuals and messaging that resonate.</p>
+    </div>
+    <div class="card">
+      <h3>Responsive Web Design</h3>
+      <img src="images/Responsive Web Design.jpg" alt="Responsive Web Design" width="475" height="220">
+      <p>Modern websites optimized for all devices and user experiences.</p>
+    </div>
+    <div class="card">
+      <h3>Digital Campaigns</h3>
+      <img src="images/Digital Campaigns.jpg" alt="Digital Campaigns" width="475" height="220">
+      <p>Drive engagement with powerful, conversion-focused marketing assets.</p>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Let’s Build Something Together</h2>
+    <p>Have a project in mind? We're ready to bring it to life. Reach out today and let’s talk.</p>
+    <a href="contact.html" class="btn-secondary">Get in Touch</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Infinity Creations. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const toggleBtn = document.querySelector('.toggle-theme');
+    const body = document.body;
+
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark');
+      localStorage.setItem('theme', body.classList.contains('dark') ? 'dark' : 'light');
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      if (localStorage.getItem('theme') === 'dark') {
+        body.classList.add('dark');
+      }
+    });
+  </script>
+</body>
+</html>
