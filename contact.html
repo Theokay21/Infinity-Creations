@@ -6,10 +6,13 @@
   <title>Contact - Infinity Creations</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="images/favicon.png.png" type="image/x-icon">
 </head>
 <body>
   <header>
-    <div class="logo">Infinity Creations</div>
+    <div class="logo">
+      <img src="images/Logo.png.png" alt="Infinity Creations Logo" width="170" height="98">
+    </div>
     <nav class="navbar">
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
@@ -19,7 +22,7 @@
     </nav>
   </header>
 
-  <section class="contact-hero">
+  <section class="hero">
     <h1>Get In Touch</h1>
     <p>We’re excited to collaborate with you. Tell us what you need!</p>
   </section>
@@ -37,7 +40,23 @@
   </section>
 
   <footer>
-    <p>&copy; 2025 Infinity Creations. Crafted with passion.</p>
+    <p>&copy; 2025 Infinity Creations. Where Imagination Meets Creativity.</p>
   </footer>
+
+  <script>
+    const toggleBtn = document.querySelector('.toggle-theme');
+    const body = document.body;
+
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark');
+      localStorage.setItem('theme', body.classList.contains('dark') ? 'dark' : 'light');
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      if (localStorage.getItem('theme') === 'dark') {
+        body.classList.add('dark');
+      }
+    });
+  </script>
 </body>
 </html>

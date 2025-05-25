@@ -36,7 +36,7 @@ body.dark {
 }
 
 a {
-  color: var(--primary);
+  color: purple;
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -153,6 +153,15 @@ section h2 {
   animation: fadeIn 0.8s ease-in-out;
   
 }
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 5rem;
+  row-gap: 3rem;
+  margin-top: 3rem;
+  animation: fadeIn 0.8s ease-in-out;
+  
+}
 
 .card {
   background: var(--light);
@@ -190,8 +199,8 @@ body.dark .card {
   gap: 1rem;
 }
 .team-member img {
-  width: 80px;
-  height: 80px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
