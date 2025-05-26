@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://theokay21.github.io/infinity-creations/sitemap.xml
